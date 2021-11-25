@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <CubeBlocks>
+    <Definition xsi:type="MyObjectBuilder_ConveyorSorterDefinition"> <!--LargeGatlingTurret  Done-->		
+		  <Id>
+			<TypeId>ConveyorSorter</TypeId>
+        <SubtypeId>BS_Main</SubtypeId>
+      </Id>
+      <DisplayName>16 Inch Mk7</DisplayName>
+      <Icon>Textures\GUI\Icons\AstronautBackpack.dds</Icon>
+      <Description>16 inch battleship main gun</Description>
+	<CubeSize>Large</CubeSize>
+	<BlockTopology>TriangleMesh</BlockTopology>
+	<Size x="5" y="2" z="6" />
+	<ModelOffset x="0" y="0" z="0" />
+	<Model>Models\BS_Main.mwm</Model>
+	<MountPoints>
+		<MountPoint Side="Bottom" StartX="0.00" StartY="0.00" EndX="5.00" EndY="6.00"/>
+	</MountPoints>
+	<BlockPairName>BS_Main</BlockPairName>
+	<BuildProgressModels>
+		
+	</BuildProgressModels>	
+      <Components>
+        <Component Subtype="SteelPlate" Count="20" />
+        <Component Subtype="Construction" Count="8" />
+        <Component Subtype="MetalGrid" Count="30" />
+        <Component Subtype="LargeTube" Count="25" />
+        <Component Subtype="Motor" Count="12" />
+		<Component Subtype="SmallTube" Count="80" />
+        <Component Subtype="Computer" Count="4" />
+        <Component Subtype="SteelPlate" Count="300" />
+      </Components>
+      <CriticalComponent Subtype="Computer" Index="0" />
+
+	<UseModelIntersection>true</UseModelIntersection>
+  
+      <VoxelPlacement>
+        <!--Possible settings Both,InVoxel,OutsideVoxel,Volumetric. If volumetric set than MaxAllowed and MinAllowed will be used.-->
+        <StaticMode>
+          <PlacementMode>OutsideVoxel</PlacementMode>
+          <MaxAllowed>0.2</MaxAllowed>
+          <MinAllowed>0</MinAllowed>
+        </StaticMode>
+        <DynamicMode>
+          <PlacementMode>OutsideVoxel</PlacementMode>
+          <MaxAllowed>0.2</MaxAllowed>
+          <MinAllowed>0.01</MinAllowed>
+        </DynamicMode>
+      </VoxelPlacement>
+ 
+      <MirroringY>Z</MirroringY>
+      <MirroringZ>Y</MirroringZ>
+      <EdgeType>Light</EdgeType>
+      <BuildTimeSeconds>40</BuildTimeSeconds>
+      <OverlayTexture>Textures\GUI\Screens\turret_overlay.dds</OverlayTexture>
+     
+	  
+      <InventoryMaxVolume>.385</InventoryMaxVolume>
+      <InventorySize>
+        <X>1</X>
+        <Y>1</Y>
+        <Z>.5</Z>
+      </InventorySize>
+	  
+      <DamageEffectName>Damage_WeapExpl_Damaged</DamageEffectName>
+      <DamagedSound>ParticleWeapExpl</DamagedSound>
+      <MinElevationDegrees>-2</MinElevationDegrees>
+      <MaxElevationDegrees>45</MaxElevationDegrees>
+      <MinAzimuthDegrees>0</MinAzimuthDegrees>
+      <MaxAzimuthDegrees>0</MaxAzimuthDegrees>
+      <IdleRotation>false</IdleRotation>
+      <MaxRangeMeters>38720</MaxRangeMeters>
+      <RotationSpeed>0.002</RotationSpeed>
+      <ElevationSpeed>0.002 </ElevationSpeed>
+      <EmissiveColorPreset>Default</EmissiveColorPreset>
+      <MinFov>0.1</MinFov>
+      <MaxFov>1.04719755</MaxFov>
+      <DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
+      <DestroySound>WepSmallWarheadExpl</DestroySound>
+      <PCU>400</PCU>
+      <IsAirTight>false</IsAirTight>  
+	  
+      <MaxRangeMeters>38720</MaxRangeMeters>	
+	  <AiEnabled>false</AiEnabled>
+		   
+    </Definition>		
+</CubeBlocks>	
+</Definitions>	
